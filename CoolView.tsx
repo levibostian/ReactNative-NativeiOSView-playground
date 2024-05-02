@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {requireNativeComponent} from 'react-native';
 
-export class CoolView extends React.Component {
+class CoolView extends React.Component {
   render() {
     return <RNCoolView {...this.props} />;
   }
@@ -19,3 +19,5 @@ CoolView.propTypes = {
 
 // requireNativeComponent automatically resolves 'RNTMap' to 'RNTMapManager'
 const RNCoolView = requireNativeComponent('CoolView');
+
+export default CoolView;
