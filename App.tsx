@@ -25,6 +25,8 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import {CoolView} from './CoolView.tsx';
+
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
@@ -72,6 +74,15 @@ function App(): React.JSX.Element {
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <Header />
+
+        <CoolView
+          leftButtonText="Lefty"
+          rightButtonText="righty"
+          value={42}
+          onPressLeftButton={() => console.log('left')}
+          style={{flex: 1}}
+        />
+
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
